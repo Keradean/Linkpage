@@ -2,4 +2,145 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --background: #1a1535;
+    --color2: #2e2456;
+    --color3: #9d7fd4;
+    --color4: #c9b8e8;
+    --text: #ece8f5;
+    --Img-border: blueviolet;
+}
+@font-face{
+    font-family: "Inter";
+    src:url("../Fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: "Marker";
+    src:url("../Fonts/Permanent_Marker/PermanentMarker-Regular.ttf") format("truetype");
+}
+h1{
+    font-size: 2.986rem;
+    font-family: "Marker", sans-serif;
+}
+h2{
+    font-size: 2.488rem;
+    font-family: "Marker", sans-serif;
+}
+h3{
+    font-size: 2.074rem;
+}
+h4{
+    font-size: 1.728rem;
+}
+h5{
+    font-size: 1.44rem;
+}
+h6{
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1rem;
+}
+small{
+    font-size: 0.694rem;
+}
+.container{
+    width: 95%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid blueviolet;
+}
+body{
+    font-family: "Inter", sans-serif;
+    background-color: var(--background);
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:3px solid red;
+        padding: 64px;
+        gap: 2rem;
+        .profile-img-container{
+            border-radius: 50%;
+            border: 3px solid var(--Img-border);
+            .Profile-img{
+                height: 8rem;
+                color: var(--text);
+                filter: brightness(0) invert(1);
+            }
+        }
+        .textcontainer{
+            text-align: center;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            p{
+                color:var(--color4)
+            }
+        }
+        .icon-container{
+            display: flex;
+            gap: 2rem;
+            justify-content: space-evenly;
+        }
+        .icon-container img{
+            width: 4rem;
+            height: 4rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            &:hover {
+                transform: scale(1.1);
+                color: var(--color3);
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+    .container{
+        width: 90%;
+    }
+}
+@media (min-width: 768px) {
+    html{
+        font-size: 1.1rem;
+    }
+    .container{
+        width: 85%;
+    }
+}
+@media (min-width: 992px) {
+    html {
+        font-size: 1.125rem;
+    }
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 1.15rem;
+    }
+    .container {
+        width: 80%;
+    }
+}
+@media (min-width: 1400px) {
+    html {
+        font-size: 1.2rem;
+    }
+    .container {
+        width: 70%;
+    }
+}
+@media (min-width: 1920px) {
+    html {
+        font-size: 1.2rem;
+    }
+    .container {
+        width: 60%;
+    }
 }
