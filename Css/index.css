@@ -7,7 +7,7 @@
 :root{
     --background: #1a1535;
     --color2: #2e2456;
-    --color3: #9d7fd4;
+    --accent: #9d7fd4;
     --color4: #c9b8e8;
     --text: #ece8f5;
     --Img-border: blueviolet;
@@ -36,6 +36,7 @@ h4{
 }
 h5{
     font-size: 1.44rem;
+    font-weight: 400;
 }
 h6{
     font-size: 1.2rem;
@@ -96,9 +97,42 @@ body{
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
             &:hover {
                 transform: scale(1.1);
-                color: var(--color3);
                 transition: transform 0.3s ease, color 0.3s ease;
             }
+        }
+    }
+    main{
+        .video-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text);
+            padding: 4rem;
+            gap: 1rem;
+            .textcontainer{
+                .h2{
+                    font-size: 2.074rem;
+                    font-family: "Marker", sans-serif;
+                    color: var(--accent);
+                }
+                h5{
+                    p{
+                        display: flex;
+                        justify-content: center;
+                        align-items:center;
+                        gap:.5rem;
+                    }
+                }
+            }
+            .video-container{
+                width: 100%;
+                video{
+                    width: 100%;
+                }
+            }
+
         }
     }
 }
