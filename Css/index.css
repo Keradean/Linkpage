@@ -63,15 +63,14 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border:3px solid red;
         padding: 64px;
         gap: 2rem;
         .profile-img-container{
             border-radius: 50%;
             border: 3px solid var(--Img-border);
+            overflow: hidden;
             .Profile-img{
                 height: 8rem;
-                color: var(--text);
                 filter: brightness(0) invert(1);
             }
         }
@@ -128,14 +127,68 @@ body{
             }
             .video-container{
                 width: 100%;
-                video{
+
+                img{
                     width: 100%;
+                    cursor: pointer;
                 }
             }
 
         }
+        .link-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 4rem 8rem 4rem;
+            gap: 2rem;
+            .linkcontainer{
+                background-color: var(--color2);
+                padding: 2rem;
+                width: 100%;
+                border-radius: 1rem;
+            }
+            a{
+                text-decoration: none;
+                color: var(--text);
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color2);
+        color: var(--text);
+        gap: .5rem;
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            img{
+                width: 4rem;
+                height: 4rem;
+                filter: brightness(0) invert(1);
+            }
+            .links{
+                display: flex;
+                gap: 1rem;
+                a{
+                    color: var(--text);
+                    text-decoration: none;
+                }
+
+            }
+        }
+
+    }
+    .footer-end{
+
     }
 }
+
+
 @media (min-width: 576px) {
     .container{
         width: 90%;
